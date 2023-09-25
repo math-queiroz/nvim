@@ -1,15 +1,16 @@
 local plugins = {
+	-- dependencies
+	{ "nvim-lua/plenary.nvim" },
+	-- core
 	{
 		"folke/which-key.nvim",
-		lazy = false,
 		init = function()
 			vim.o.timeout = true
-			vim.o.timeoutlen = 300
+			vim.o.timeoutlen = 500
 		end,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		lazy = false,
 		init = function()
 			local opts = require("plugins.config.lualine")
 			require("lualine").setup(opts.get())
@@ -25,18 +26,25 @@ local plugins = {
 	},
 	{
 		"numToStr/Comment.nvim",
-		lazy = false,
 		init = function()
 			local opts = require("plugins.config.comment")
-			require("nvim-tree").setup(opts.get())
+			require("Comment").setup(opts.get())
 		end,
-	}
-}
-
-local opts = {
-	checker = {
-		enabled = true
-	}
+	},
+	{
+		"nvim-telescope/telescope.nvim",
+		init = function()
+			local opts = require("plugins.config.telescope")
+			require("telescope").setup(opts.get())
+		end,
+	},
+	{
+		"williamboman/mason.nvim",
+		init = function()
+			local opts = require("plugins.config.mason")
+			require("mason").setup(opts.get())
+		end,
+	},
 }
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -52,4 +60,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(plugins, opts)
+require("lazy").setup(plugins, {
+	install = {
+		colorscheme = { "default" }
+	},
+	ui = {
+		border = "single",
+	}
+})

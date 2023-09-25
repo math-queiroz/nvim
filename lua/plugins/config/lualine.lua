@@ -1,7 +1,6 @@
 local M = {}
 
-M.get = function ()
-
+M.get = function()
 	local colors = {
 		darkgray = "#16161d", gray    = "#727169", innerbg = nil,
 		outerbg  = "#16161D", normal  = "#7e9cd8", insert  = "#98bb6c",
@@ -45,10 +44,10 @@ M.get = function ()
 		options = {
 			theme = custom_theme,
 			icons_enabled = true,
-			component_separators = { left = '', right = ''},
-			--component_separators = {},
+			-- component_separators = { left = '', right = ''},
+			component_separators = {},
 			section_separators = { left = '', right = ''},
-			--section_separators = {},
+			-- section_separators = {},
 			disabled_filetypes = {
 				statusline = {},
 				winbar = {},
