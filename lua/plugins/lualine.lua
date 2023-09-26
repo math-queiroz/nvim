@@ -7,7 +7,7 @@ M.init = function()
 		visual   = "#ffa066", replace = "#e46876", command = "#e6c384",
 	}
 
-	local custom_theme = {
+	local theme = {
 		inactive = {
 			a = { fg = colors.gray, bg = colors.outerbg, gui = "bold" },
 			b = { fg = colors.gray, bg = colors.outerbg },
@@ -42,7 +42,7 @@ M.init = function()
 
 	require('lualine').setup({
 		options = {
-			theme = custom_theme,
+			theme = theme,
 			icons_enabled = true,
 			-- component_separators = { left = '', right = ''},
 			component_separators = {},

@@ -10,6 +10,10 @@ M.config = function()
 		toggler = {
 			line = '<C-k>',
 			block = '<C-j>',
+		},
+		opleader = {
+			line = '<C-k>',
+			block = '<C-j>',
 		}
 	})
 end

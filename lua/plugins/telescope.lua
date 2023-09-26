@@ -1,5 +1,7 @@
 local M = { 'nvim-telescope/telescope.nvim' }
 
+M.dependencies = 'nvim-lua/plenary.nvim'
+
 -- keybinds
 local default = { noremap = true, silent = true }
 vim.keymap.set('n', 'gp', '<Cmd>Telescope<CR>', default)

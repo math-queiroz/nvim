@@ -1,10 +1,10 @@
 local M = { 'williamboman/mason.nvim' }
 
--- vim.keymap.set('n', 'gg', '<Cmd>echo Hello World!<CR>', { noremap = true, silent = true })
+M.cmd = 'Mason'
 
-M.init = function()
+M.config = function()
 	require('mason').setup({
-		ui = { border = "single" }
+		ui = { border = 'single' }
 	})
 end
 

@@ -1,8 +1,9 @@
-local M = {
-	{'L3MON4D3/LuaSnip'},
+return {
+	-- async
 	{'nvim-lua/plenary.nvim'},
-	{'rafamadriz/friendly-snippets'},
+	-- snippets
+	{'L3MON4D3/LuaSnip'},
 	{'saadparwaiz1/cmp_luasnip'},
+	{'rafamadriz/friendly-snippets', lazy = false},
 }
 
-return M

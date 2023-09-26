@@ -1,3 +1,4 @@
+vim.g.mapleader = ' '
 -- line numbers
 vim.opt.relativenumber = true
 vim.opt.number = true
@@ -7,4 +8,6 @@ vim.opt.shiftwidth = 2
 -- hide tilde on empty lines
 vim.opt.fillchars='eob: '
 -- termguicolors (for colorizer plugin)
-vim.opt.termguicolors = true
+if vim.fn.has("termguicolors") then
+	vim.opt.termguicolors = true
+end

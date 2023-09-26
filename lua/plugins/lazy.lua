@@ -5,6 +5,8 @@ local plugins = {
 	require('plugins.cmp'),
 	require('plugins.colorizer'),
 	require('plugins.comment'),
+	require('plugins.gitsigns'),
+	require('plugins.lspconfig'),
 	require('plugins.lualine'),
 	require('plugins.mason'),
 	require('plugins.nvim-tree'),
@@ -13,7 +15,7 @@ local plugins = {
 	require('plugins.which-key'),
 }
 
-for _,dep in pairs(require('plugins.dependencies')) do
+for _, dep in pairs(require('plugins.dependencies')) do
 	table.insert(plugins, dep)
 end
 

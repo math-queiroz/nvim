@@ -1,8 +1,10 @@
 local M = {}
 
--- M.keys = { 'gg', '<Cmd>echo Hello World!<CR>', 'desc' }
+M.cmd = ''
 
-M.get = function()
+M.keys = {}
+
+M.config = function()
 	return {}
 end
 
