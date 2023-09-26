@@ -6,3 +6,5 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 -- hide tilde on empty lines
 vim.opt.fillchars='eob: '
+-- termguicolors (for colorizer plugin)
+vim.opt.termguicolors = true

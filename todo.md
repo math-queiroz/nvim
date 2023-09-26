@@ -1,6 +1,6 @@
 # Markdonw TO-DO
 
-- fix tabnine
-- fix selection coloring
-- add rust coding support
-- maybe add golang support?
+- [x] Fix selection coloring
+- [x] Refactor plugin config handling
+- [ ] Add rust coding support
+- [ ] Maybe add golang support?

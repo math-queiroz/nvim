@@ -1,8 +1,10 @@
-local M = {}
+local M = { 'nvim-tree/nvim-tree.lua' }
 
-vim.keymap.set('n', '<C-w><C-e>', '<Cmd>NvimTreeToggle<CR>', { noremap = true, silent = true })
+M.keys = {
+	{ '<C-w><C-e>', '<Cmd>NvimTreeToggle<CR>', 'Toggle NvimTree'}
+}
 
-M.get = function()
+M.config = function()
 	require("nvim-tree").setup({
 		sort_by = "case_sensitive",
 		view = {

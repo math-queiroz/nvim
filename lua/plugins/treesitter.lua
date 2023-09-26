@@ -1,6 +1,6 @@
-local M = {}
+local M = { 'williamboman/mason.nvim' }
 
-M.get = function()
+M.init = function()
 	return {
 		highlight = { enable = true },
 		indent = { enable = true },

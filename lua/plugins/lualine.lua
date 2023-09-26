@@ -1,6 +1,6 @@
-local M = {}
+local M = { 'nvim-lualine/lualine.nvim' }
 
-M.get = function()
+M.init = function()
 	local colors = {
 		darkgray = "#16161d", gray    = "#727169", innerbg = nil,
 		outerbg  = "#16161D", normal  = "#7e9cd8", insert  = "#98bb6c",
@@ -40,7 +40,7 @@ M.get = function()
 		},
 	}
 
-	return {
+	require('lualine').setup({
 		options = {
 			theme = custom_theme,
 			icons_enabled = true,
@@ -81,7 +81,7 @@ M.get = function()
 		winbar = {},
 		inactive_winbar = {},
 		extensions = {}
-	} 
+	}) 
 end
 
 return M
