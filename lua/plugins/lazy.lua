@@ -2,9 +2,12 @@ local plugins = {
 	-- colorscheme
 	require('plugins.colorscheme.gruvbox'),
 	-- core
+	require('plugins.auto-pairs'),
+	require('plugins.bufferline'),
 	require('plugins.cmp'),
 	require('plugins.colorizer'),
 	require('plugins.comment'),
+	require('plugins.git'),
 	require('plugins.gitsigns'),
 	require('plugins.lspconfig'),
 	require('plugins.lualine'),

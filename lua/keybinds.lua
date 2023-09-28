@@ -1,5 +1,7 @@
 local api = vim.api
+
 local M = {}
+
 M.scope = {}
 
 -- keybindings
