@@ -1,6 +1,6 @@
 local M = { 'simrat39/rust-tools.nvim' }
 
-M.lazy = false
+M.ft = { 'rust', 'rs' } 
 
 M.init = function()
 	require('rust-tools').setup({

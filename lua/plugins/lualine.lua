@@ -1,5 +1,7 @@
 local M = { 'nvim-lualine/lualine.nvim' }
 
+M.event = 'UIEnter'
+
 M.init = function()
 	local colors = {
 		darkgray = "#16161d", gray    = "#727169", innerbg = nil,

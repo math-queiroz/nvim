@@ -1,5 +1,7 @@
 local M = { 'williamboman/mason.nvim' }
 
+M.event = 'InsertEnter'
+
 M.init = function()
 	return {
 		highlight = { enable = true },

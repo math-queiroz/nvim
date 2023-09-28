@@ -24,9 +24,6 @@ require('lspconfig').rust_analyzer.setup({
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
   callback = function(ev)
-		vim.keymap.set('n', '<F5>', '<Cmd>!cargo run<CR>', { noremap = true })
-		vim.keymap.set('n', '<F6>', '<Cmd>!cargo run --bin %:t:r<CR>', { noremap = true })
+		require('keybinds').register('rust')
 	end
 })
-
-return M
