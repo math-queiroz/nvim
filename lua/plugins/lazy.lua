@@ -7,7 +7,6 @@ local plugins = {
 	require('plugins.cmp'),
 	require('plugins.colorizer'),
 	require('plugins.comment'),
-	require('plugins.git'),
 	require('plugins.gitsigns'),
 	require('plugins.lspconfig'),
 	require('plugins.lualine'),

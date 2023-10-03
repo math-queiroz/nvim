@@ -1,5 +1,4 @@
 -- line numbers
-vim.opt.relativenumber = true
 vim.opt.number = true
 
 -- tab
@@ -7,12 +6,15 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 
 -- hide tilde on empty lines
-vim.opt.fillchars='eob: '
+vim.opt.fillchars = 'eob: '
 
 -- termguicolors (for colorizer plugin)
-if vim.fn.has("termguicolors") then
+if vim.fn.has('termguicolors') then
 	vim.opt.termguicolors = true
 end
+
+-- clipboard
+vim.opt.clipboard = 'unnamedplus'
 
 -- pink lazy background fix (https://neovim.discourse.group/t/how-to-configure-floating-window-colors-highlighting-in-0-8/3193)
 vim.api.nvim_set_hl(0, 'FloatBorder', {bg='#3B4252', fg='#5E81AC'})

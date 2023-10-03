@@ -8,15 +8,37 @@ M.scope = {}
 vim.g.mapleader = ' '
 
 M.scope['global'] = {
+	{ 'n', '<Space>', '<Nop>'},
 	{ 'n', '<Tab>', '<Cmd>tabn<CR>' },
 	{ 'n', '<S-Tab>', '<Cmd>tabp<CR>' },
 	{ 'n', '<Esc>', '<Cmd>noh<CR>', { silent = false }},
+
+	{ 'n', '<A-j>', ':m .+1<CR>==' },
+	{ 'n', '<A-k>', ':m .-2<CR>==' },
+	{ 'v', '<A-j>', ':m ">+1<CR>gv=gv"' },
+	{ 'v', '<A-k>', ':m "<-2<CR>gv=gv"' },
 }
 
 -- plugins
+M.scope['bufferline'] = {
+	{'n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>' },
+	{'n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>' },
+	{'n', '<Leader>q', '<Cmd>bp<Bar>sp<Bar>bn<Bar>bd<Bar>set bufhidden=delete<CR>' },
+}
+
 M.scope['comment'] = {
-	{ '', '<C-k>', '<Plug>(comment.line.current)<CR>' },
-	{ '', '<C-k>', '<Plug>(comment.block)<CR>' },
+	{ 'n', '<C-k>', '<Plug>(comment_toggle_linewise_current)<CR>' },
+	{ 'v', '<C-k>', '<Plug>(comment_toggle_linewise_visual)<CR>' },
+}
+
+M.scope['gitsigns'] = {
+	{ 'n', '<Leader>gh', '<Cmd>Gitsigns preview_hunk<CR>' },
+	{ 'n', '<Leader>gn', '<Cmd>Gitsigns next_hunk<CR>' },
+}
+
+M.scope['nvim-tree'] = {
+	{'n', '<C-w><C-e>', '<Cmd>NvimTreeToggle<CR>' },
+	{'n', '<C-w>e', '<Cmd>NvimTreeToggle<CR>' },
 }
 
 M.scope['telescope'] = {
@@ -28,12 +50,8 @@ M.scope['telescope'] = {
 	{'n', '<Leader>gs', '<Cmd>Telescope git_stash<CR>' },
 }
 
-M.scope['nvim-tree'] = {
-	{'n', '<C-w><C-e>', '<Cmd>NvimTreeToggle<CR>' },
-}
-
 M.scope['which-key'] = {
-	{ '<Leader>w', '<Cmd>WhichKey<CR>', 'Whick key' }
+	{ '<Leader>w', '<Cmd>WhichKey<CR>', 'Whick key' },
 }
 
 -- lsp
