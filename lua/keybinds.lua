@@ -15,15 +15,15 @@ M.scope['global'] = {
 
 	{ 'n', '<A-j>', ':m .+1<CR>==' },
 	{ 'n', '<A-k>', ':m .-2<CR>==' },
-	{ 'v', '<A-j>', ':m ">+1<CR>gv=gv"' },
-	{ 'v', '<A-k>', ':m "<-2<CR>gv=gv"' },
+	{ 'v', '<A-j>', ':m \'>+1<CR>gv=gv\\\'' },
+	{ 'v', '<A-k>', ':m \'<-2<CR>gv=gv\\\'' },
 }
 
 -- plugins
 M.scope['bufferline'] = {
 	{'n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>' },
 	{'n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>' },
-	{'n', '<Leader>q', '<Cmd>bp<Bar>sp<Bar>bn<Bar>bd<Bar>set bufhidden=delete<CR>' },
+	{'n', '<Leader>q', '<Cmd>bp<Bar>sp<Bar>bn<Bar>bd<CR>' },
 }
 
 M.scope['comment'] = {
