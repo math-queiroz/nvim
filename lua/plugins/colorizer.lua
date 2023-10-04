@@ -1,11 +1,9 @@
 local M = { 'norcalli/nvim-colorizer.lua' }
 
-M.ft = 'css'
+M.event = 'BufRead'
 
 M.config = function()
-	require('colorizer').setup({
-		'*';
-  })
+	require('colorizer').setup({'*'})
 end
 
 return M

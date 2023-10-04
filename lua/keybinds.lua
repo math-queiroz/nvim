@@ -51,7 +51,7 @@ M.scope['telescope'] = {
 }
 
 M.scope['which-key'] = {
-	{ '<Leader>w', '<Cmd>WhichKey<CR>', 'Whick key' },
+	{'n', '<Leader>w', '<Cmd>WhichKey<CR>' },
 }
 
 -- lsp
