@@ -1,6 +1,12 @@
+local capabilites = require("cmp_nvim_lsp").default_capabilities()
+
 require('lspconfig').rust_analyzer.setup({
 	cmd = { 'rust-analyzer' },
   filetypes = { 'rust', 'rs' },
+	capabilities = capabilites,
+	flags = {
+		debounce_text_changes = 150
+	},
   settings = {
     ['rust-analyzer'] = {
       cargo = {
@@ -18,7 +24,7 @@ require('lspconfig').rust_analyzer.setup({
         },
       },
     },
-  }
+  },
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {

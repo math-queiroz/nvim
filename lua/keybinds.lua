@@ -23,7 +23,7 @@ M.scope['global'] = {
 M.scope['bufferline'] = {
 	{'n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>' },
 	{'n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>' },
-	{'n', '<Leader>q', '<Cmd>bp<Bar>sp<Bar>bn<Bar>bd<CR>' },
+	{'n', '<Leader>q', '<Cmd>bp<Bar>sp<Bar>bn<Bar>bd!<CR>' },
 }
 
 M.scope['comment'] = {
@@ -31,9 +31,17 @@ M.scope['comment'] = {
 	{ 'v', '<C-k>', '<Plug>(comment_toggle_linewise_visual)<CR>' },
 }
 
+M.scope['cmp'] = {
+	{ 'n', '<C-k>', '<Plug>(comment_toggle_linewise_current)<CR>' },
+}
+
 M.scope['gitsigns'] = {
-	{ 'n', '<Leader>gh', '<Cmd>Gitsigns preview_hunk<CR>' },
-	{ 'n', '<Leader>gn', '<Cmd>Gitsigns next_hunk<CR>' },
+	{ 'n', '<Leader>gd', '<Cmd>Gitsigns diffthis<CR>' },
+	{ 'n', '<Leader>gh', '<Cmd>Gitsigns toggle_linehl<CR><Cmd>Gitsigns toggle_deleted<CR>' },
+	{ 'n', '<Leader>gj', '<Cmd>Gitsigns next_hunk<CR>' },
+	{ 'n', '<Leader>gy', '<Cmd>Gitsigns stage_hunk<CR>' },
+	{ 'n', '<Leader>gn', '<Cmd>Gitsigns reset_hunk<CR>' },
+	{ 'n', '<Leader>ga', '<Cmd>Gitsigns stage_buffer<CR>' },
 }
 
 M.scope['nvim-tree'] = {
@@ -57,7 +65,7 @@ M.scope['which-key'] = {
 -- lsp
 M.scope['rust'] = {
 	{ 'n', '<F5>', '<Cmd>!cargo run<CR>', { noremap = true }},
-	{ 'n', '<F6>', vim.fn.expand('%:r:t')=='main' and '<Cmd>!cargo run --bin %:t:r<CR>' or '<Cmd>!cargo run<CR>', { noremap = true, expr = true }}
+	{ 'n', '<F6>', '<Cmd>!cargo run --bin %:t:r<CR>', { noremap = true }}
 }
 
 -- module code
