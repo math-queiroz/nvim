@@ -7,5 +7,7 @@ return {
 	{'hrsh7th/cmp-nvim-lsp'},
 	{'hrsh7th/cmp-buffer'},
 	{'rafamadriz/friendly-snippets', lazy = false},
+	-- lualine
+	{'arkav/lualine-lsp-progress'}
 }
 

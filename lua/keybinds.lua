@@ -27,8 +27,11 @@ M.scope['bufferline'] = {
 }
 
 M.scope['comment'] = {
-	{ 'n', '<C-k>', '<Plug>(comment_toggle_linewise_current)<CR>' },
-	{ 'v', '<C-k>', '<Plug>(comment_toggle_linewise_visual)<CR>' },
+	{ 'n', '<C-k>',	function() return vim.v.count == 0
+		and '<Plug>(comment_toggle_linewise_current)'
+		or '<Plug>(comment_toggle_linewise_count)'
+	end, { expr = true }},
+	{ 'v', '<C-k>', '<Plug>(comment_toggle_blockwise_visual)<CR>' },
 }
 
 M.scope['cmp'] = {

@@ -23,7 +23,7 @@ M.config = function()
 			completion = cmp.config.window.bordered(),
 		},
 		mapping = cmp.mapping.preset.insert({
-			['<Tab>'] = cmp.mapping.confirm({select = true}),
+			['<CR>'] = cmp.mapping.confirm({select = true}),
 	  	-- navigate between completion item
 			['<M-k>'] = cmp.mapping.select_prev_item(),
 			['<M-j>'] = cmp.mapping.select_next_item(),

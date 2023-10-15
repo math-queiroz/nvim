@@ -1,11 +1,13 @@
 local M = { 'nvim-lualine/lualine.nvim' }
 
+M.dependencies = {'arkav/lualine-lsp-progress'}
+
 M.event = 'UIEnter'
 
 M.init = function()
 	local colors = {
-		darkgray = '#1C161d', gray    = '#727169', innerbg = nil,
-		outerbg  = '#1C161d', normal  = '#458588', insert  = '#D3869B',
+		darkgray = '#18171b', gray    = '#727169', innerbg = nil,
+		outerbg  = nil, normal  = '#458588', insert  = '#D3869B',
 		visual   = '#ffa066', replace = '#e46876', command = '#FE8019',
 	}
 
@@ -46,11 +48,11 @@ M.init = function()
 		options = {
 			theme = theme,
 			icons_enabled = true,
-			-- component_separators = { left = '', right = ''},
-			component_separators = {},
-			section_separators = { left = ' ', right = ' '  },
-			--section_separators = { left = '', right = ''},
-			-- section_separators = {},
+			-- component_separators = { left = '', right = '' },
+			component_separators = { left = '|', right = '|' },
+			-- section_separators = { left = ' ', right = ' '  },
+			-- section_separators = { left = '', right = ''},
+			section_separators = { left = ' ', right = ' ' },
 			disabled_filetypes = {
 				statusline = {},
 				winbar = {},
@@ -68,8 +70,8 @@ M.init = function()
 			lualine_a = {'mode'},
 			lualine_b = {'branch', 'diff', 'diagnostics'},
 			lualine_c = {'filename'},
-			lualine_x = {'encoding', 'fileformat', 'filetype'},
-			lualine_y = {'progress'},
+			lualine_x = {'lsp_progress'},
+			lualine_y = {'filetype', 'encoding'},
 			lualine_z = {'location'}
 		},
 		inactive_sections = {
