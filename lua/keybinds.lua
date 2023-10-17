@@ -50,7 +50,7 @@ M.scope['gitsigns'] = {
 	{ 'n', '<Leader>gh', '<Cmd>Gitsigns toggle_linehl<CR><Cmd>Gitsigns toggle_deleted<CR>' },
 	{ 'n', '<Leader>gj', '<Cmd>Gitsigns next_hunk<CR>' },
 	{ 'n', '<Leader>gy', '<Cmd>Gitsigns stage_hunk<CR>' },
-	{ 'n', '<Leader>gn', '<Cmd>Gitsigns reset_hunk<CR>' },
+	{ 'n', '<Leader>gr', '<Cmd>Gitsigns reset_hunk<CR>' },
 	{ 'n', '<Leader>ga', '<Cmd>Gitsigns stage_buffer<CR>' },
 }
 
