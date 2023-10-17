@@ -1,7 +1,7 @@
 require('lspconfig').yamlls.setup({
 	cmd = { 'yaml-language-server', '--stdio' },
-  filetypes = { 'yaml', 'yml' },
-  settings = {
+	filetypes = { 'yaml', 'yml' },
+	settings = {
 		['yaml'] = {
 			completion = true,
 			validate = true,
@@ -17,8 +17,8 @@ require('lspconfig').yamlls.setup({
 })
 
 -- vim.api.nvim_create_autocmd('LspAttach', {
---   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
---   callback = function(ev)
+-- 	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+-- 		callback = function(ev)
 -- 		require('keybinds').register('yamlls')
 -- 	end
 -- })
