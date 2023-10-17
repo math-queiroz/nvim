@@ -25,6 +25,7 @@ M.scope['global'] = {
 	{ 'n', '\'\'', 'ciW\'<C-r>"\'<Esc>', { desc = 'Surround w/ \''}},
 	{ 'n', '\'(', 'ciW(<C-r>")<Esc>', { desc = 'Surround w/ ()'}},
 	{ 'n', '\'[', 'ciW[<C-r>"]<Esc>', { desc = 'Surround w/ []'}},
+	{ 'n', '\'{', 'ciW{<C-r>"}<Esc>', { desc = 'Surround w/ {}'}},
 	{ 'n', '\'<', 'ciW<<C-r>"><Esc>', { desc = 'Surround w/ <>'}},
 	{ 'v', '\'\'', 'c<Esc>vlp', { desc = 'Remov surround selection'}},
 }
