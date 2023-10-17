@@ -1,3 +1,5 @@
+local util = require('util')
+
 local api = vim.api
 
 local M = {}
@@ -8,15 +10,23 @@ M.scope = {}
 vim.g.mapleader = ' '
 
 M.scope['global'] = {
+	-- general
 	{ 'n', '<Space>', '<Nop>'},
 	{ 'n', '<Tab>', '<Cmd>tabn<CR>' },
 	{ 'n', '<S-Tab>', '<Cmd>tabp<CR>' },
 	{ 'n', '<Esc>', '<Cmd>noh<CR>', { silent = false }},
-
+	-- move lines
 	{ 'n', '<A-j>', ':m .+1<CR>==' },
 	{ 'n', '<A-k>', ':m .-2<CR>==' },
-	{ 'v', '<A-j>', ':m \'>+1<CR>gv=gv\\\'' },
-	{ 'v', '<A-k>', ':m \'<-2<CR>gv=gv\\\'' },
+	{ 'v', '<A-j>', '<Cmd>m \'>+1<CR>gv=gv\\\'<CR>' },
+	{ 'v', '<A-k>', '<Cmd>m \'<-2<CR>gv=gv\\\'<CR>' },
+	-- surround delim
+	{ 'n', '\'"', 'ciW"<C-r>""<Esc>',    { desc = 'Surround w/ "'}},
+	{ 'n', '\'\'', 'ciW\'<C-r>"\'<Esc>', { desc = 'Surround w/ \''}},
+	{ 'n', '\'(', 'ciW(<C-r>")<Esc>', { desc = 'Surround w/ ()'}},
+	{ 'n', '\'[', 'ciW[<C-r>"]<Esc>', { desc = 'Surround w/ []'}},
+	{ 'n', '\'<', 'ciW<<C-r>"><Esc>', { desc = 'Surround w/ <>'}},
+	{ 'v', '\'\'', 'c<Esc>vlp', { desc = 'Remov surround selection'}},
 }
 
 -- plugins
