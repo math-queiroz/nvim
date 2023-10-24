@@ -9,6 +9,11 @@ end
 M.config = function()
 	require('nvim-tree').setup({
 		sort_by = 'case_sensitive',
+		update_cwd = true,
+		update_focused_file = {
+			enable = true,
+			update_cwd = true,
+		},
 		view = {
 			width = 30,
 		},
