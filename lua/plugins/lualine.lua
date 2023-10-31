@@ -56,7 +56,8 @@ M.init = function()
 			component_separators = { left = '|', right = '|'},
 			-- section_separators = {},
 			--section_separators = { left = '', right = ''},
-			section_separators = { left = ' ', right = ' '  },
+			-- section_separators = { left = ' ', right = ' '  },
+			section_separators = {},
 			disabled_filetypes = {
 				statusline = {},
 				winbar = {},
