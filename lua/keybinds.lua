@@ -11,9 +11,9 @@ vim.g.mapleader = ' '
 M.scope['global'] = {
 	-- general
 	{ 'n', '<Space>', '<Nop>'},
+	{ 'n', '<Esc>', '<Cmd>noh<CR>', { silent = false }},
 	{ 'n', '<Tab>', '<Cmd>tabn<CR>' },
 	{ 'n', '<S-Tab>', '<Cmd>tabp<CR>' },
-	{ 'n', '<Esc>', '<Cmd>noh<CR>', { silent = false }},
 	-- move lines
 	{ 'n', '<A-j>', ':m .+1<CR>==' },
 	{ 'n', '<A-k>', ':m .-2<CR>==' },

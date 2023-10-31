@@ -2,10 +2,11 @@ return {
 	-- async
 	{'nvim-lua/plenary.nvim'},
 	-- snippets
+	{'ms-jpq/coq.artifacts'},
 	{'L3MON4D3/LuaSnip', dependencies = 'rafamadriz/friendly-snippets'},
-	{'saadparwaiz1/cmp_luasnip', build = 'make install_jsregexp'},
-	{'hrsh7th/cmp-nvim-lsp'},
 	{'hrsh7th/cmp-buffer'},
+	{'hrsh7th/cmp-nvim-lsp'},
 	{'rafamadriz/friendly-snippets', lazy = false},
+	{'saadparwaiz1/cmp_luasnip', build = 'make install_jsregexp'},
 }
 
