@@ -5,6 +5,7 @@ local plugins = {
 	require('plugins.auto-pairs'),
 	require('plugins.bufferline'),
 	require('plugins.cmp'),
+	require('plugins.coq'),
 	require('plugins.colorizer'),
 	require('plugins.comment'),
 	require('plugins.gitsigns'),

@@ -1,6 +1,6 @@
 local M = { 'hrsh7th/nvim-cmp' }
 
-M.event = 'InsertEnter'
+-- M.event = 'InsertEnter'
 
 M.dependencies = {
 	'L3MON4D3/LuaSnip',
@@ -15,10 +15,10 @@ M.config = function()
 	local cmp = require('cmp')
 	cmp.setup({
 		snippet = {
-      expand = function(args)
-        require('luasnip').lsp_expand(args.body)
-      end
-    },
+			expand = function(args)
+				require('luasnip').lsp_expand(args.body)
+			end
+		},
 		window = {
 			completion = cmp.config.window.bordered(),
 		},

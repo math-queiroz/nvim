@@ -5,6 +5,8 @@ vim.opt.relativenumber = true
 -- tab
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+vim.opt.list = true
+vim.opt.listchars = 'tab:⍿ '
 
 -- hide tilde on empty lines
 vim.opt.fillchars = 'eob: '
