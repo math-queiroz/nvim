@@ -36,7 +36,7 @@ A complete list of plugins can be found in the `lua/plugins/lazy.lua` file
 
 ## Keybinds
 A list of keybindings can be found in the `lua/keybinds.lua` file, 
-and some other keybindings (like telescope's) are spread around theirs plugins definition files
+and some other keybindings (like for telescope) are spread around theirs plugins definition files
 
 The leader key is defined to <kbd>Space</kbd>
 
