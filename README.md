@@ -57,10 +57,10 @@ The leader key is defined to <kbd>Space</kbd>
 ### Bufferline
 + <kbd>Tab</kbd> - Next tab
 + <kbd>Shift</kbd> <kbd>Tab</kbd> - Previous tab
-+ <kbd>Leader</kbd> <kbd>Q</kbd> - Close file
++ <kbd>Leader</kbd> <kbd>q</kbd> - Close file
 
 ### Comment
-+ <kbd>Ctrl</kbd> <kbd>K</kbd> - Comment line/block
++ <kbd>Ctrl</kbd> <kbd>k</kbd> - Comment line/block
 
 ### GitSigns
 + <kbd>Leader</kbd> <kbd>gd</kbd> - Git diff
