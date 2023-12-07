@@ -51,11 +51,13 @@ M.init = function()
 		options = {
 			theme = theme,
 			icons_enabled = true,
-			-- component_separators = { left = '', right = '' },
-			component_separators = { left = '|', right = '|' },
+			-- component_separators = {},
+			-- component_separators = { left = '', right = ''},
+			component_separators = { left = '|', right = '|'},
+			-- section_separators = {},
 			-- section_separators = { left = ' ', right = ' '  },
-			-- section_separators = { left = '', right = ''},
-			section_separators = { left = ' ', right = ' ' },
+			section_separators = { left = '', right = ''  },
+			-- section_separators = {},
 			disabled_filetypes = {
 				statusline = {},
 				winbar = {},
@@ -73,9 +75,9 @@ M.init = function()
 			lualine_a = {'mode'},
 			lualine_b = {'branch', 'diff', 'diagnostics'},
 			lualine_c = {},
-			lualine_x = {lsp_progress, 'filename'},
-			lualine_y = {'encoding'},
-			lualine_z = {'location'}
+			lualine_x = {},
+			lualine_y = {lsp_progress, 'filename'},
+			lualine_z = {'location'},
 		},
 		inactive_sections = {
 			lualine_a = {},
