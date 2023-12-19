@@ -19,7 +19,7 @@ git clone https://github.com/math-queiroz/nvim ~/.config
 ## Plugins
 A complete list of plugins can be found in the `lua/plugins/lazy.lua` file
 
-+ Plugin management via [Lazy.nvim](https://github.com/folke/lazy.nvim)]
++ Plugin management via [Lazy.nvim](https://github.com/folke/lazy.nvim)
 + Autopairing via [NvimAutopairs](https://github.com/windwp/nvim-autopairs)
 + Comment toggling via [Comment](https://github.com/numToStr/Comment.nvim)
 + Completion via [coq_nvim](https://github.com/ms-jpq/coq_nvim)
