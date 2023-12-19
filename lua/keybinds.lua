@@ -65,6 +65,7 @@ M.scope['nvim-tree'] = {
 
 M.scope['telescope'] = {
 	{'n', '<Leader>tt', '<Cmd>Telescope<CR>' },
+	{'n', '<Leader>tl', '<Cmd>Telescope live_grep<CR>' },
 	{'n', '<Leader>ff', '<Cmd>Telescope find_files<CR>' },
 	{'n', '<Leader>fo', '<Cmd>Telescope oldfiles<CR>' },
 	{'n', '<Leader>gc', '<Cmd>Telescope git_commits<CR>' },
