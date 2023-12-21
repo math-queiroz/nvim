@@ -34,3 +34,10 @@ vim.api.nvim_create_autocmd({ 'BufEnter' }, {
 		end
 	end,
 })
+
+-- Hide number on TermOpen
+vim.api.nvim_create_autocmd({ 'TermOpen' }, {
+	callback = function(args)
+		vim.cmd('set nonu nornu')
+	end
+})
