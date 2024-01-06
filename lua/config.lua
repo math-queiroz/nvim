@@ -1,3 +1,6 @@
+-- disable mouse
+vim.opt.mouse = ""
+
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
