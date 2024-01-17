@@ -1,4 +1,4 @@
-local M = {'arkav/lualine-lsp-progress'}
+local M = { 'arkav/lualine-lsp-progress' }
 
 M.component = {
 	'lsp_progress',

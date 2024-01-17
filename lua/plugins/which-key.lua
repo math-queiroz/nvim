@@ -2,7 +2,7 @@ local M = { 'folke/which-key.nvim' }
 
 M.cmd = 'WhichKey'
 
-M.init = function()
+M.config = function()
 	require('keybinds').register('which-key')
 end
 
