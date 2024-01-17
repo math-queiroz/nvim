@@ -1,21 +1,16 @@
-local M = { 'williamboman/mason.nvim' }
+local M = { 'nvim-treesitter/nvim-treesitter' }
 
-M.event = 'InsertEnter'
+M.event = 'BufRead'
+
+M.build = ':TSUpdate'
 
 M.opts = {
 	highlight = { enable = true },
 	indent = { enable = true },
 	ensure_installed = {
-		"json",
-		"lua",
-		"luadoc",
-		"markdown",
-		"markdown_inline",
 		"regex",
 		"typescript",
-		"vim",
-		"vimdoc",
-		"yaml",
+		"svelte",
 	},
 	incremental_selection = {
 		enable = true,
@@ -27,5 +22,11 @@ M.opts = {
 		},
 	},
 }
+
+M.config = function(_, opts)
+	require('nvim-treesitter.install').prefer_git = false
+	require('nvim-treesitter.install').compilers = { 'clang', 'gcc' }
+	require('nvim-treesitter.configs').setup(opts)
+end
 
 return M
