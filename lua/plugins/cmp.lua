@@ -11,7 +11,6 @@ M.dependencies = {
 
 M.config = function()
 	require('keybinds').register('cmp')
-
 	local cmp = require('cmp')
 	cmp.setup({
 		snippet = {

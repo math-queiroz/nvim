@@ -4,7 +4,7 @@ M.dependencies = 'nvim-lua/plenary.nvim'
 
 M.cmd = 'Telescope'
 
-M.init = function()
+M.config = function()
 	require('keybinds').register('telescope')
 end
 

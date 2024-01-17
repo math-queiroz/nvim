@@ -4,7 +4,8 @@ M.dependencies = 'arkav/lualine-lsp-progress'
 
 M.event = 'UIEnter'
 
-M.init = function()
+
+M.init = function(_, opts)
 	local colors = {
 		darkgray = '#1C161d', gray    = '#727169', innerbg = nil,
 		outerbg  = nil,			  normal  = '#458588', insert  = '#D3869B',
@@ -47,7 +48,7 @@ M.init = function()
 	local lualine = require('lualine')
 	local lsp_progress = require('plugins.dependencies.lsp-progress').component
 
-	lualine.setup({
+	lualine.setup( {
 		options = {
 			theme = theme,
 			icons_enabled = true,
@@ -91,8 +92,7 @@ M.init = function()
 		winbar = {},
 		inactive_winbar = {},
 		extensions = {}
-	}) 
-
+	})
 end
 
 return M
