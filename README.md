@@ -73,3 +73,10 @@ The leader key is defined to <kbd>Space</kbd>
 
 ### NvimTree
 + <kbd>Ctrl</kbd> <kbd>w</kbd> <kbd>Ctrl</kbd> <kbd>e</kbd>  - Open directory tree
+
+---
+
+### Troubleshoot
+
+- On Windows, it may be required to manually clone coq_nvim on a terminal as administrator with symlinks enabled (as from https://github.com/ms-jpq/coq_nvim/issues/589#issuecomment-1651436348);   
+*Fix with:* `cd $Env.LocalAppdata/nvim-data/lazy && rm -Force coq_nvim && git -c core.symlinks=true clone https://github.com/ms-jpq/coq_nvim.git`
