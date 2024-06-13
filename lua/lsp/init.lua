@@ -6,9 +6,9 @@ require('lspconfig.ui.windows').default_options.border = 'single'
 
 vim.diagnostic.config({
   virtual_text = false,
-	float = {
-		border = 'rounded'
-	}
+  float = {
+    border = 'rounded'
+  }
 })
 
 -- Show line diagnostics automatically in hover window

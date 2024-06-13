@@ -6,8 +6,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- tab
-vim.opt.tabstop = 2
+vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 vim.opt.list = true
 vim.opt.listchars = 'tab:⍿ '
 
@@ -16,7 +17,7 @@ vim.opt.fillchars = 'eob: '
 
 -- termguicolors (for colorizer plugin)
 if vim.fn.has('termguicolors') then
-	vim.opt.termguicolors = true
+  vim.opt.termguicolors = true
 end
 
 -- clipboard
@@ -31,16 +32,16 @@ vim.api.nvim_set_hl(0, 'TelescopeBorder', {bg='#3B4252'})
 -- Autohide nameless buffers
 vim.api.nvim_create_autocmd({ 'BufEnter' }, {
   pattern = '{}',
-	callback = function(args)
-		if vim.api.nvim_buf_get_name(args.buf) == '' then
-			vim.cmd('set bufhidden=delete')
-		end
-	end,
+  callback = function(args)
+    if vim.api.nvim_buf_get_name(args.buf) == '' then
+      vim.cmd('set bufhidden=delete')
+    end
+  end,
 })
 
 -- Hide number on TermOpen
 vim.api.nvim_create_autocmd({ 'TermOpen' }, {
-	callback = function(args)
-		vim.cmd('setlocal nonu nornu')
-	end
+  callback = function(args)
+    vim.cmd('setlocal nonu nornu')
+  end
 })
