@@ -9,9 +9,18 @@
   </span>
 </p></div>
 
-# Usage
+# Setup
+
+Clone repo to system's configuration dir
+
 ```
-git clone https://github.com/math-queiroz/nvim ~/.config
+git clone https://github.com/math-queiroz/nvim
+```
+
+Install dependencies on Windows via winget
+
+```
+winget install LLVM.LLVM DenoLand.Deno Python.Python.3.12
 ```
 
 # Features
