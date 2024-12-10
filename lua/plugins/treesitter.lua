@@ -8,8 +8,12 @@ M.opts = {
   highlight = { enable = true },
   indent = { enable = true },
   ensure_installed = {
+    "javascript",
+    "html",
+    "css",
+    "markdown",
+    "markdown-inline",
     "regex",
-    "svelte",
   },
   incremental_selection = {
     enable = true,
