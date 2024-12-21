@@ -12,8 +12,10 @@ M.opts = {
     "html",
     "css",
     "markdown",
-    "markdown-inline",
+    "markdown_inline",
     "regex",
+    "yaml",
+    "toml",
   },
   incremental_selection = {
     enable = true,
