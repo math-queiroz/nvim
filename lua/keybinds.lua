@@ -83,6 +83,11 @@ M.scope['rust'] = {
   { 'n', '<F6>', '<Cmd>!cargo run --bin %:t:r<CR>', { noremap = true }}
 }
 
+-- lsp
+M.scope['yamlls'] = {
+  { 'n', '<F7>', '<Cmd>!kubectl apply -f %<CR>', { noremap = true }},
+}
+
 -- module code
 M.register = function(scopeid)
   if M.scope[scopeid] == nil then
