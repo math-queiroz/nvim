@@ -11,6 +11,7 @@ local plugins = {
   require('plugins.lualine'),
   require('plugins.mason'),
   require('plugins.nvim-tree'),
+  require('plugins.snacks'),
   require('plugins.telescope'),
   require('plugins.treesitter'),
   require('plugins.which-key'),
