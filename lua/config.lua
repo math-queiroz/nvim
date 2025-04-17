@@ -1,5 +1,9 @@
 -- disable mouse
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
+
+-- search stuff
+vim.opt.ignorecase = true -- search case insensitive
+vim.opt.smartcase = true -- search matters if capital letter
 
 -- line numbers
 vim.opt.number = true
