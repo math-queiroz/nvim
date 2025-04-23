@@ -4,7 +4,6 @@ M.dependencies = 'arkav/lualine-lsp-progress'
 
 M.event = 'UIEnter'
 
-
 M.init = function(_, opts)
   local colors = {
     darkgray = '#1C161d', gray    = '#727169', innerbg = nil,
@@ -54,7 +53,7 @@ M.init = function(_, opts)
       icons_enabled = true,
       -- component_separators = {},
       -- component_separators = { left = '', right = ''},
-      component_separators = { left = '|', right = '|'},
+      component_separators = { left = '', right = ''},
       -- section_separators = {},
       -- section_separators = { left = ' ', right = ' '  },
       section_separators = { left = '', right = ''  },
@@ -78,7 +77,7 @@ M.init = function(_, opts)
       lualine_c = {},
       lualine_x = {},
       lualine_y = {lsp_progress, 'filename'},
-      lualine_z = {'location'},
+      lualine_z = {'progress', 'location'},
     },
     inactive_sections = {
       lualine_a = {},
