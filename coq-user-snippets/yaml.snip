@@ -132,11 +132,11 @@ snippet Secret
   data:
     ${3:key}: ${4:value}
 
-snippet env
+snippet EnvEntry
   - name: ${1:VAR_NAME}
     value: ${2:value}
 
-snippet env SecretRef
+snippet SecretEntry
   valueFrom:
     secretKeyRef:
       name: ${1:secret-name}
@@ -190,7 +190,7 @@ snippet SecretKeyRef
       name: ${1:secret}
       key: ${2:key}
 
-snippet cert-manager certificate
+snippet Certificate
   apiVersion: cert-manager.io/v1
   kind: Certificate
   metadata:
@@ -227,7 +227,7 @@ snippet NetworkPolicy
           matchLabels:
             ${5:$4}: ${6:"true"}
 
-snippet Liveness/Readiness Probes
+snippet HealthProbes
   livenessProbe: &probe
     initialDelaySeconds: ${1:10}
     httpGet:
@@ -292,7 +292,7 @@ snippet Resources
       cpu: ${3:$1}
       memory: ${4:$2}}$0
 
-snippet Init Container
+snippet InitContainer
   initContainers:
   - name: ${1:myinit}
     image: ${2:busybox}
@@ -301,7 +301,7 @@ snippet Init Container
     - name: ${4:data}
       mountPath: ${5:/data}}$0
 
-snippet Deployment Strategy
+snippet DeploymentStrategy
   strategy:
     type: ${1:RollingUpdate|Recreate}
     rollingUpdate:
@@ -336,7 +336,7 @@ snippet RoleBinding
     name: ${8:pod-reader} # this must match the name of the Role or ClusterRole you wish to bind to
     apiGroup: rbac.authorization.k8s.io
 
-snippet Role and Binding
+snippet RoleBinding
   kind: ${1:Cluster}Role
   apiVersion: rbac.authorization.k8s.io/v1
   metadata:
@@ -414,13 +414,13 @@ snippet Volume Mount and spec
     ${5:configMap}:
       ${6:name}: ${7:someName}
 
-snippet Volume Mount
+snippet VolumeMount
   - name: ${1:volume}
     mountPath: ${2:/etc/mount/path}
     ${3:subPath: ${4: key}}
   $0
 
-snippet nginx ingress class annotation
+snippet NginxClassAnnotation
   kubernetes.io/ingress.class: nginx
 
 snippet Affinitiy/Anti-Affinity
@@ -436,7 +436,7 @@ snippet Affinitiy/Anti-Affinity
             - ${4:appname}
         topologyKey: ${5:kubernetes.io/hostname}
 
-snippet Horizontal Pod Autoscaler
+snippet HorizontalPodAutoscaler
   apiVersion: autoscaling/v2beta1
   kind: HorizontalPodAutoscaler
   metadata:
@@ -493,7 +493,7 @@ snippet Toleration
     effect: ${4:NoSchedule}
   $0
 
-snippet Kubernetes metadata header
+snippet KubernetesHeader
   apiVersion: ${1:apps/v1}
   kind: ${2:DaemonSet}
   metadata:
@@ -502,7 +502,7 @@ snippet Kubernetes metadata header
     labels:
       app: $3
 
-snippet Container spec
+snippet ContainerSpec
   - name: ${1:alpine}
     image: ${2:$1}
     imagePullPolicy: Always
