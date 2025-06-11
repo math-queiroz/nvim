@@ -1,7 +1,7 @@
-require('lsp.rust-analyzer')
-require('lsp.svelte')
-require('lsp.yamlls')
 require('lsp.javascript')
+require('lsp.rust')
+require('lsp.svelte')
+require('lsp.yaml')
 
 require('lspconfig.ui.windows').default_options.border = 'single'
 

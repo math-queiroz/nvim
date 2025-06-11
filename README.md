@@ -9,6 +9,13 @@
   </span>
 </p></div>
 
+# Quick reference for desired/required software
+- base-devel (for plugin compilation)
+- python (for auto completion)
+- language servers
+  - deno (for javascript)
+  - rust-analyzer (for rust)
+
 # Setup
 
 Clone repo to system's configuration dir
