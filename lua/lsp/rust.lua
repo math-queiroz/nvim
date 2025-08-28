@@ -14,8 +14,8 @@ lsp.rust_analyzer.setup(
         cargo = {
           allFeatures = true,
         },
-        checkOnSave = {
-          allFeatures = true,
+        checkOnSave = true,
+        check = {
           command = 'clippy',
         },
         procMacro = {
