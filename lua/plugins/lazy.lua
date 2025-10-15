@@ -1,6 +1,6 @@
 local plugins = {
   -- colorscheme
-  require('plugins.colorscheme.gruvbox'),
+  require('plugins.colorscheme.tokyonight'),
   -- core
   require('plugins.bufferline'),
   require('plugins.colorizer'),
@@ -12,7 +12,6 @@ local plugins = {
   require('plugins.mason'),
   require('plugins.nvim-tree'),
   require('plugins.peek'),
-  require('plugins.snacks'),
   require('plugins.telescope'),
   require('plugins.treesitter'),
   require('plugins.which-key'),

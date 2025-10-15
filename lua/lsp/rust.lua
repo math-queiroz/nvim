@@ -1,8 +1,7 @@
-local lsp = require('lspconfig')
 local coq = require('coq')
 
-lsp.rust_analyzer.setup(
-  coq.lsp_ensure_capabilities({
+vim.lsp.config('rust_analyzer', {
+  setup = coq.lsp_ensure_capabilities({
     cmd = { 'rust-analyzer' },
     filetypes = { 'rust', 'rs' },
     capabilities = capabilites,
@@ -28,7 +27,7 @@ lsp.rust_analyzer.setup(
       },
     },
   })
-)
+})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),

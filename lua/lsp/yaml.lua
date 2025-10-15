@@ -1,8 +1,7 @@
-local lsp = require('lspconfig')
 local coq = require('coq')
 
-lsp.yamlls.setup(
-  coq.lsp_ensure_capabilities({
+vim.lsp.config('yamlls', {
+  setup = coq.lsp_ensure_capabilities({
     cmd = { 'yaml-language-server', '--stdio' },
     filetypes = { 'yaml', 'yml' },
     settings = {
@@ -19,7 +18,7 @@ lsp.yamlls.setup(
       }
     }
   })
-)
+})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),

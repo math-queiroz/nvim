@@ -4,7 +4,7 @@
   <span>The lua config files for my neovim setup</span><br>
   <span>
     I mainly use <a href="https://github.com/folke/lazy.nvim">💤 lazy.nvim</a> for plugin management,
-    <a href="https://github.com/ellisonleao/gruvbox.nvim">gruvbox</a> as colorscheme and
+    <a href="https://github.com/ellisonleao/gruvbox.nvim">gruvbox</a>/<a href="https://github.com/folke/tokyonight.nvim">tokyonight</a> as colorscheme and
     <a href="https://github.com/nvim-lualine/lualine.nvim">lualine</a> as status bar
   </span>
 </p></div>

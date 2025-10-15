@@ -6,8 +6,8 @@ M.event = 'UIEnter'
 
 M.init = function(_, opts)
   local colors = {
-    darkgray = '#1C161d', gray    = '#727169', innerbg = nil,
-    outerbg  = nil,        normal  = '#458588', insert  = '#D3869B',
+    darkgray = '#1C161d', gray    = '#727169', innerbg = 'NONE',
+    outerbg  = 'NONE',    normal  = '#458588', insert  = '#D3869B',
     visual   = '#ffa066', replace = '#e46876', command = '#FE8019',
   }
 

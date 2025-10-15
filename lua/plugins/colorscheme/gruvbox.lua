@@ -1,3 +1,5 @@
+local transparency = require('plugins.colorscheme.transparency')
+
 local M = { 'ellisonleao/gruvbox.nvim' }
 
 M.priority = 1000
@@ -5,6 +7,7 @@ M.priority = 1000
 M.init = function()
     require('util').hide_bg()
     vim.cmd('colorscheme gruvbox')
+    transparency.apply()
 end
 
 return M
