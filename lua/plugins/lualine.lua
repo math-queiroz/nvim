@@ -7,7 +7,7 @@ M.event = 'UIEnter'
 M.init = function(_, opts)
   local colors = {
     darkgray = '#1C161d', gray    = '#727169', innerbg = 'NONE',
-    outerbg  = 'NONE',    normal  = '#458588', insert  = '#D3869B',
+    outerbg  = 'NONE',    normal  = '#769FF0', insert  = '#D3869B',
     visual   = '#ffa066', replace = '#e46876', command = '#FE8019',
   }
 
@@ -52,8 +52,8 @@ M.init = function(_, opts)
       theme = theme,
       icons_enabled = true,
       -- component_separators = {},
-      -- component_separators = { left = '', right = ''},
-      component_separators = { left = '', right = ''},
+      component_separators = { left = '', right = ''},
+      -- component_separators = { left = '', right = ''},
       -- section_separators = {},
       -- section_separators = { left = ' ', right = ' '  },
       section_separators = { left = '', right = ''  },
@@ -72,11 +72,11 @@ M.init = function(_, opts)
       }
     },
     sections = {
-      lualine_a = {'mode'},
-      lualine_b = {'branch', 'diff', 'diagnostics'},
-      lualine_c = {},
-      lualine_x = {},
-      lualine_y = {lsp_progress, 'filename'},
+      lualine_a = {'mode', 'branch'},
+      lualine_b = {'diagnostics'},
+      lualine_c = {'diff'},
+      lualine_x = {lsp_progress},
+      lualine_y = {'filename'},
       lualine_z = {'progress', 'location'},
     },
     inactive_sections = {
