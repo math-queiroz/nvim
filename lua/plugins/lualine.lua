@@ -7,7 +7,7 @@ M.event = 'UIEnter'
 M.init = function(_, opts)
   local colors = {
     darkgray = '#1C161d', gray    = '#727169', innerbg = 'NONE',
-    outerbg  = 'NONE',    normal  = '#769FF0', insert  = '#D3869B',
+    outerbg  = 'NONE',    normal  = '#ff0000', insert  = '#D3869B',
     visual   = '#ffa066', replace = '#e46876', command = '#FE8019',
   }
 
@@ -95,3 +95,4 @@ M.init = function(_, opts)
 end
 
 return M
+
