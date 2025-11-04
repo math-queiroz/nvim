@@ -5,7 +5,16 @@ M.dependencies = 'arkav/lualine-lsp-progress'
 M.event = 'UIEnter'
 
 M.init = function(_, opts)
+  function darken(hex, f)
+    f = f or 0.4
+    local r = tonumber(hex:sub(2,3),16)*f
+    local g = tonumber(hex:sub(4,5),16)*f
+    local b = tonumber(hex:sub(6,7),16)*f
+    return string.format("#%02x%02x%02x", r, g, b)
+  end
+
   local colors = {
+    white = '#eeeeee',
     darkgray = '#1C161d', gray    = '#727169', innerbg = 'NONE',
     outerbg  = 'NONE',    normal  = '#769FF0', insert  = '#D3869B',
     visual   = '#ffa066', replace = '#e46876', command = '#FE8019',
@@ -19,27 +28,27 @@ M.init = function(_, opts)
     },
     visual = {
       a = { fg = colors.darkgray, bg = colors.visual, gui = 'bold' },
-      b = { fg = colors.gray, bg = colors.outerbg },
+      b = { fg = colors.white, bg = darken(colors.visual) },
       c = { fg = colors.gray, bg = colors.innerbg },
     },
     replace = {
       a = { fg = colors.darkgray, bg = colors.replace, gui = 'bold' },
-      b = { fg = colors.gray, bg = colors.outerbg },
+      b = { fg = colors.white, bg = darken(colors.replace) },
       c = { fg = colors.gray, bg = colors.innerbg },
     },
     normal = {
       a = { fg = colors.darkgray, bg = colors.normal, gui = 'bold' },
-      b = { fg = colors.gray, bg = colors.outerbg },
+      b = { fg = colors.white, bg = darken(colors.normal) },
       c = { fg = colors.gray, bg = colors.innerbg },
     },
     insert = {
       a = { fg = colors.darkgray, bg = colors.insert, gui = 'bold' },
-      b = { fg = colors.gray, bg = colors.outerbg },
+      b = { fg = colors.white, bg = darken(colors.insert) },
       c = { fg = colors.gray, bg = colors.innerbg },
     },
     command = {
       a = { fg = colors.darkgray, bg = colors.command, gui = 'bold' },
-      b = { fg = colors.gray, bg = colors.outerbg },
+      b = { fg = colors.white, bg = darken(colors.command) },
       c = { fg = colors.gray, bg = colors.innerbg },
     },
   }
