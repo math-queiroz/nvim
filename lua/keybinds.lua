@@ -78,9 +78,11 @@ M.scope['which-key'] = {
 }
 
 -- lsp
-M.scope['rust'] = {
-  { 'n', '<F5>', '<Cmd>!cargo run<CR>', { noremap = true }},
-  { 'n', '<F6>', '<Cmd>!cargo run --bin %:t:r<CR>', { noremap = true }}
+M.scope['rust_analyzer'] = {
+  { 'n', '<F5>', '<Cmd>!cargo run --release<CR>', { noremap = true }},
+  { 'n', '<F6>', '<Cmd>!cargo run --release --bin %:t:r<CR>', { noremap = true }},
+  { 'n', '<S-F5>', '<Cmd>!cargo run<CR>', { noremap = true }},
+  { 'n', '<S-F6>', '<Cmd>!cargo run --bin %:t:r<CR>', { noremap = true }},
 }
 
 -- lsp

@@ -1,6 +1,6 @@
 local coq = require('coq')
 
-vim.lsp.config('denols', {
+vim.lsp.enable('denols', {
   setup = coq.lsp_ensure_capabilities({
     on_attach = on_attach,
     root_markers = { "deno.json", "deno.jsonc" },

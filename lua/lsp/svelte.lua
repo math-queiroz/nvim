@@ -1,6 +1,6 @@
 local coq = require('coq')
 
-vim.lsp.config('svelte', {
+vim.lsp.enable('svelte', {
   setup = coq.lsp_ensure_capabilities({
     cmd = { "npx", "svelteserver.cmd", "--stdio" },
     filetypes = { "svelte" },
@@ -8,10 +8,3 @@ vim.lsp.config('svelte', {
     settings = {},
   })
 })
-
--- vim.api.nvim_create_autocmd('LspAttach', {
---   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
---     callback = function(ev)
---     require('keybinds').register('yamlls')
---   end
--- })

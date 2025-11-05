@@ -1,6 +1,6 @@
 local coq = require('coq')
 
-vim.lsp.config('yamlls', {
+vim.lsp.enable('yamlls', {
   setup = coq.lsp_ensure_capabilities({
     cmd = { 'yaml-language-server', '--stdio' },
     filetypes = { 'yaml', 'yml' },
@@ -17,12 +17,15 @@ vim.lsp.config('yamlls', {
         },
       }
     }
-  })
+  }),
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-    callback = function(ev)
-    require('keybinds').register('yamlls')
+  group = vim.api.nvim_create_augroup('UserLspConfig', { clear = false }),
+  callback = function(ev)
+    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+    if client and client.name == 'yamlls' then
+      require('keybinds').register('yamlls')
+    end
   end
 })
