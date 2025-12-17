@@ -1,6 +1,7 @@
 local plugins = {
   -- colorscheme
-  require('plugins.colorscheme.tokyonight'),
+  -- require('plugins.colorscheme.tokyonight'),
+  require('plugins.colorscheme.gruvbox'),
   -- core
   require('plugins.bufferline'),
   require('plugins.colorizer'),
