@@ -15,6 +15,7 @@ local plugins = {
   require('plugins.peek'),
   require('plugins.telescope'),
   require('plugins.treesitter'),
+  require('plugins.treesitter-context'),
   require('plugins.which-key'),
 }
 

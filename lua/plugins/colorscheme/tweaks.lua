@@ -13,6 +13,9 @@ M.apply = function()
   -- Telescope
   vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "none" })
   vim.api.nvim_set_hl(0, "TelescopePromptTitle", { bg = "none" })
+
+  -- TreesitterContext
+  vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underdotted=true })
 end
 
 return M
