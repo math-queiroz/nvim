@@ -1,3 +1,4 @@
+require('lsp.gopls')
 require('lsp.javascript')
 require('lsp.rust')
 require('lsp.svelte')
