@@ -34,6 +34,7 @@ vim.lsp.enable('rust_analyzer', {
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', { clear = false }),
   callback = function(ev)
+    vim.g.rustfmt_autosave = 1
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
     if client and client.name == 'rust_analyzer' then
       require('keybinds').register('rust_analyzer')
