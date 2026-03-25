@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
               vim.cmd("qa!")
               vim.loop.spawn("nvim", { args = { vim.fn.getcwd() } })
             else
-              vim.notify("Config already up to date", vim.log.levels.INFO)
+              vim.notify("Config up to date", vim.log.levels.INFO)
             end
           end)
         end)
