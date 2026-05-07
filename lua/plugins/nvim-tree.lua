@@ -9,6 +9,9 @@ end
 M.opts = {
   sort_by = 'case_sensitive',
   update_cwd = true,
+  update_focused_file = {
+    enable = true,
+  },
   view = {
     width = 30,
   },
