@@ -31,7 +31,7 @@ M.opts = {
 M.config = function(_, opts)
   require('nvim-treesitter.install').prefer_git = false
   require('nvim-treesitter.install').compilers = { 'clang', 'gcc' }
-  require('nvim-treesitter.configs').setup(opts)
+  require('nvim-treesitter.config').setup(opts)
 end
 
 return M
