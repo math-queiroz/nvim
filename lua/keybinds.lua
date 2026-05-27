@@ -58,10 +58,16 @@ M.scope['gitsigns'] = {
   { 'n', '<Leader>ga', '<Cmd>Gitsigns stage_buffer<CR>' },
 }
 
-M.scope['nvim-tree'] = {
-  {'n', '<C-w><C-e>', '<Cmd>NvimTreeToggle<CR>' },
-  {'n', '<C-w>e', '<Cmd>NvimTreeToggle<CR>' },
+M.scope['opencode'] = {
+  {{ 'n', 'x' }, '<Leader>a', function() require("opencode").ask("@this: ", { submit = true }) end },
+  {{ 'n', 'x' }, '<Leader>x', function() require("opencode").select() end },
+  {{ 'n', 'x' }, '<Leader>.', function() require("opencode").toggle() end },
 }
+
+M.scope['snacks'] = {
+  {'n', '<C-w><C-e>', function() Snacks.explorer() end },
+}
+
 
 M.scope['telescope'] = {
   {'n', '<Leader>tt', '<Cmd>Telescope<CR>' },
