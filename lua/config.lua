@@ -19,6 +19,9 @@ vim.opt.listchars = 'tab:⍿ '
 -- hide tilde on empty lines
 vim.opt.fillchars = 'eob: '
 
+-- prevent resize
+vim.opt.equalalways = false
+
 -- termguicolors (for colorizer plugin)
 if vim.fn.has('termguicolors') then
   vim.opt.termguicolors = true
