@@ -1,34 +1,32 @@
 local coq = require('coq')
 
 vim.lsp.enable('rust_analyzer', {
-  setup = function()
-    coq.lsp_ensure_capabilities({
-      cmd = { 'rust-analyzer' },
-      filetypes = { 'rust', 'rs' },
-      capabilities = capabilites,
-      flags = {
-        debounce_text_changes = 150
-      },
-      settings = {
-        ['rust-analyzer'] = {
-          cargo = {
-            allFeatures = true,
-          },
-          checkOnSave = true,
-          check = {
-            command = 'clippy',
-          },
-          procMacro = {
-            ignored = {
-              ['async-trait'] = { 'async_trait' },
-              ['napi-derive'] = { 'napi' },
-              ['async-recursion'] = { 'async_recursion' },
-            },
+  setup = {
+    cmd = { 'rust-analyzer' },
+    filetypes = { 'rust', 'rs' },
+    capabilities = capabilites,
+    flags = {
+      debounce_text_changes = 150
+    },
+    settings = {
+      ['rust-analyzer'] = {
+        cargo = {
+          allFeatures = true,
+        },
+        checkOnSave = true,
+        check = {
+          command = 'clippy',
+        },
+        procMacro = {
+          ignored = {
+            ['async-trait'] = { 'async_trait' },
+            ['napi-derive'] = { 'napi' },
+            ['async-recursion'] = { 'async_recursion' },
           },
         },
       },
-    })
-  end
+    },
+  }
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {

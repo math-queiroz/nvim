@@ -1,7 +1,7 @@
 local coq = require('coq')
 
 vim.lsp.enable('yamlls', {
-  setup = coq.lsp_ensure_capabilities({
+  setup = {
     cmd = { 'yaml-language-server', '--stdio' },
     filetypes = { 'yaml', 'yml' },
     settings = {
@@ -17,7 +17,7 @@ vim.lsp.enable('yamlls', {
         },
       }
     }
-  }),
+  }
 })
 
 vim.api.nvim_create_autocmd('LspAttach', {

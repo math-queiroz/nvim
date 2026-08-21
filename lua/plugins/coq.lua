@@ -6,7 +6,6 @@ M.lazy = false
 
 M.init = function(_, _opts)
   require('coq')
-  vim.cmd('COQnow -s')
 end
 
 return M
