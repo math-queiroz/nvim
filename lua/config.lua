@@ -1,6 +1,9 @@
 -- disable mouse
 vim.opt.mouse = "a"
 
+-- hide dashv
+vim.opt.shortmess += "I"
+
 -- search stuff
 vim.opt.ignorecase = true -- search case insensitive
 vim.opt.smartcase = true -- search matters if capital letter
