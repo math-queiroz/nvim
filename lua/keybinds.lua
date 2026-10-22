@@ -56,6 +56,7 @@ M.scope['gitsigns'] = {
   { 'n', '<Leader>gy', '<Cmd>Gitsigns stage_hunk<CR>' },
   { 'n', '<Leader>gr', '<Cmd>Gitsigns reset_hunk<CR>' },
   { 'n', '<Leader>ga', '<Cmd>Gitsigns stage_buffer<CR>' },
+  { 'n', '<Leader>gb', '<Cmd>Telescope git_branches<CR>' },
 }
 
 M.scope['opencode'] = {
