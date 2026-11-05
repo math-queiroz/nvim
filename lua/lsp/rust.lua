@@ -1,4 +1,4 @@
-local coq = require('coq')
+require('coq')
 
 vim.lsp.enable('rust_analyzer', {
   setup = {
