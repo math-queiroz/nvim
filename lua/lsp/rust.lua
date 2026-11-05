@@ -1,5 +1,7 @@
 require('coq')
 
+vim.g.rust_recommended_style = 0
+
 vim.lsp.enable('rust_analyzer', {
   setup = {
     cmd = { 'rust-analyzer' },
